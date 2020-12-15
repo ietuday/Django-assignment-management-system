@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .auth-container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: block;
+    margin: 0;
+    max-width: none;
+    overflow: hidden;
+  }
+  .auth-container::after {
+    content: "";
+    background: url("../static/images/purple.jpg");
+    background-size: center;
+    opacity: 0.6;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  @keyframes animatedBackground {
+      from { background-position: 0 0; }
+      to { background-position: 100% 0; }
+  }
+  
+  .signup-form {
+    width: 30%;
+    margin: auto;
+    /* border-radius: 15px; */
+    /* height: 40%; */
+    background: #fff;
+    padding: 0 10px;
+    box-shadow: 3px 2px 9px -2px;
+    z-index: 1000;
+  }
+  
+  .auth-container .auth-header {
+    text-align: center;
+    margin-top: 5%;
+    font-family:  serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+    text-shadow: 0px 3px 0px #ddd;
+  }
+  .btn {
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 0.25em;
+    background:#512DA8;
+    /* margin-left: 10%; */
+  }
+  
+  .btn:hover {
+    background: #673AB7;
+  }
+  
+  .signup-tab {
+    height: 70vh;
+  }
+
+  .login-tab {
+    height: 35vh;
+  }
+
+  .tabs, .tabs .tab a.active {
+    background: #fff;
+  }
+  
+  .tabs .tab a.active, .tabs .tab a:hover {
+    color: #9575CD;
+  }
+  
+  .tabs .tab a {
+    color: #9e9e9e;
+  }
+  
+  .auth-tabs {
+    margin-bottom: 50px;
+  }
+  
+  input[type=text]:not(.browser-default), 
+  input[type=password]:not(.browser-default), 
+  input[type=email]:not(.browser-default), 
+  input[type=number]:not(.browser-default), 
+  textarea.materialize-textarea {
+    margin-bottom: 40px;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+
+  input[type=search]:not(.browser-default) {
+
+  }
+  
+  input[type=text]:not(.browser-default):focus, 
+  input[type=password]:not(.browser-default):focus, 
+  input[type=email]:not(.browser-default):focus {
+    border: 1px solid #9575CD;
+    box-shadow: none;
+  }
+  
+  input[type=password]:not(.browser-default):focus:not([readonly]), 
+  input[type=text]:not(.browser-default):focus:not([readonly]),
+  input[type=email]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid #9575CD;
+    box-shadow: none;
+  }
+
+  .tabs .indicator {
+    background-color: #9575CD;
+  }
+  
+  .auth-form {
+    margin: auto !important;
+  }
+  
+  .auth-form label {
+    font-size: 18px;
+  }
+  
+  .input-search input[type=text] {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    padding: 0.5em 1em;
+    color: #B8B6B6;
+    margin: auto;
+    height: 2.5rem;
+    top: -30px;
+  }
+  
+  
+  .input-search i {
+    transform: translateY(50%);
+    color: #B8B6B6;
+  }
+  
+  .sub-body {
+    margin-left: 3%;
+  }
+  
+  .body {
+    margin: 2%;
+  }
+  
+  .add-assignment {
+    float: right;
+    bottom: 40px;
+    background: #512DA8;
+    margin-top: 20px;
+  }
+  
+  .signout a {
+     color: #fff;
+  }
+  
+  .no-assignment {
+    text-align: center;
+    margin: 2%;
+  }
+  
+  .no-assignment p {
+    font-size: 30px;
+    color: #939393;
+  }
+  
+  .table {
+    box-shadow: 3px 2px 9px -2px;
+  }
+  
+  .assignment-container {
+    width: 50%;
+    height: 70%;
+  }
+  
+  .assignment-detail {
+    border: 1px solid #CACCCD;
+    border-radius: 10px;
+    width: 30%;
+    margin: auto;
+    padding: 30px;
+    background: #fff;
+    height: 60%;
+    margin-top: 50px;
+  }
+  
+  .single-assignment .col {
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    word-spacing: 2.5px;
+  }
+  
+  .assignment-detail .btn {
+    width: 40%;
+    height: 50px;
+    border-radius: 0.25em;
+    margin-left: 0;
+  }
+  
+  .assignment-detail .btn-delete {
+    background: #FF2323;
+  }
+  
+  .single-assignment h4 {
+    transform: none;
+    margin-bottom: 0;
+  }
+  
+  .single-assignment .col p {
+    width: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  .edit-delete {
+    height: 50px;
+    width: 100%;
+  }
+  .edit-delete a {
+    float: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  
+  .edit-delete button {
+    float: right;
+  }
+  
+  .assignment-pass{
+    width: 50%;
+    margin: 10% auto;
+    background: #fff;
+    height: 50%;
+  }
+  
+  .input-pass label, .input-search label{
+    display: none;
+  }
+  
+  .assignment-pass input[type=text] {
+    border: 1px solid #9e9e9e;
+    border-radius: 0.5em;
+    padding: 5px;
+  }
+  
+   .assignment-pass h4 {
+     transform: none;
+     text-align: center;
+   }
+  
+   .assignment-pass input[type=text]:focus {
+     border:1px solid #26a69a;
+   }
+  
+  .submit-assignment {
+    border: 1px solid #CACCCD;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    background: #fff;
+    height: 50%;
+    margin-top: 50px;
+  }
+  
+  .submit-assignment .border-left {
+    border-left: 1px solid #CACCCD;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 600px;
+  }
+  
+  .submit-assignment .border-right {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  
+  .submit-assignment .file-field .btn {
+    height: 4rem;
+  }
+  
+  .pagination-div {
+    text-align: left;
+  }
+  
+  .pagination li {
+    width: 30px;
+  }
+  .pagination span {
+    margin-top: 5px;
+  }
+  .nav {
+    background-color: #512DA8;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #signup form select {
+    display: block;
+    border: 1px solid #ccc;
+    height: 3.8rem;
+    border-radius: 0.25em;
+    color: #9e9e9e;
+    margin-bottom: 40px;
+  }
+
+  #signuo form select:focus {
+    border: 1px solid #9575CD;
+  }
+
+  ul .forgot-password-link{
+    list-style: none;
+    font-size: 1rem;
+    padding-top: 15px;
+  }
+
+  ul .forgot-password-link a {
+    color: #9575CD;    
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  .search-row {
+    margin: auto;
+  }
+
+  .edit-delete i.right {
+    margin-left: 0;
+  }
+
+  .feedback-form input[type=text]:not(.browser-default) {
+    margin-bottom: 0;
+    height: 3.1rem;
+    width: 70%;
+  }
+
+  .feedback-form button {
+    height: 3.3rem;
+    width: 20%;
+    background: #512DA8; 
+    position: relative;
+    top: 3px;
+    left: -5px;
+    border-radius: 0.25em;
+  }
+
+  .feedback-form button i{
+    color: #fff;
+  }
+
+  .input-field.col label {
+    padding: 5px;
+  }
+
+  .assignment-edit .input-field.col label {
+    padding: 0;
+  }
+
+  .forgot-password {
+    width: 50%;
+    height: 50%;
+    margin: 10% auto;
+  }
+
+  .forgot-password h4 {
+    text-align: center;
+  }
+
+  .forgot-password-text p {
+    font-size: 18px;
+
+  }
